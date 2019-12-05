@@ -5,8 +5,8 @@ public class Maison extends Habitable{
     private boolean contientJardin, contientGarage, contientPiscine;
     private double superficieHabitable;
 
-    public Maison(String addresse, String wilaya, Transaction typeTransaction, Coordonnees coordonnees, Date date, double superficie, double prix, boolean negociable, String description, String[] imgsUrl, int nbrPieces, boolean estMeuble, int nbrEtages, boolean contientJardin, boolean contientGarage, boolean contientPiscine, double superficieHabitable) {
-        super(addresse, wilaya, typeTransaction, coordonnees, date, superficie, prix, negociable, description, imgsUrl, nbrPieces, estMeuble);
+    public Maison(String addresse, Wilaya wilaya, Transaction typeTransaction, Proprietaire proprietaire, Date date, double superficie, double prix, boolean negociable, String description, String[] imgsUrl, int nbrPieces, boolean estMeuble, int nbrEtages, boolean contientJardin, boolean contientGarage, boolean contientPiscine, double superficieHabitable) {
+        super(addresse, wilaya, typeTransaction, proprietaire, date, superficie, prix, negociable, description, imgsUrl, nbrPieces, estMeuble);
         this.nbrEtages = nbrEtages;
         this.contientJardin = contientJardin;
         this.contientGarage = contientGarage;
@@ -34,8 +34,15 @@ public class Maison extends Habitable{
         return superficieHabitable;
     }
 
-    public String avoirType() {
-        return "Maison";
+
+    @Override
+    protected double prixVente() {
+        return super.prixVente() + ( (this.contientGarage || this.contientJardin || this.contientPiscine) ? this.getPrix() * 0.005 : 0 );
+    }
+
+    @Override
+    protected double prixLocation() {
+        return super.prixLocation() + ( (this.contientPiscine) ? 50000 : 0 );
     }
 
     public void afficher() {
