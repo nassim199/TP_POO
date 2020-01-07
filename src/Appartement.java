@@ -1,13 +1,14 @@
 import java.util.Date;
 
 public class Appartement extends Habitable{
-    private int etage, f;
+    private int etage;
     private boolean estDuplex, contientAscenseur;
 
-    public Appartement(String addresse, Wilaya wilaya, Transaction typeTransaction, Proprietaire proprietaire, Date date, double superficie, double prix, boolean negociable, String description, String[] imgsUrl, int nbrPieces, boolean estMeuble, int etage, int f, boolean estDuplex, boolean contientAscenseur) {
+    public Appartement(String addresse, Wilaya wilaya, Transaction typeTransaction, Proprietaire proprietaire, Date date, double superficie, double prix, boolean negociable, String description, String[] imgsUrl, int nbrPieces, boolean estMeuble, int etage, boolean estDuplex, boolean contientAscenseur) throws DuplexException{
         super(addresse, wilaya, typeTransaction, proprietaire, date, superficie, prix, negociable, description, imgsUrl, nbrPieces, estMeuble);
         this.etage = etage;
-        this.f = f;
+        if (nbrPieces == 1 && estDuplex)
+            throw new DuplexException();
         this.estDuplex = estDuplex;
         this.contientAscenseur = contientAscenseur;
     }
@@ -15,10 +16,6 @@ public class Appartement extends Habitable{
 
     public int getEtage() {
         return etage;
-    }
-
-    public int getF() {
-        return f;
     }
 
     public boolean isEstDuplex() {

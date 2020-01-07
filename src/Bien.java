@@ -1,4 +1,6 @@
+import java.util.Arrays;
 import java.util.Date;
+import java.util.Objects;
 
 abstract public class Bien implements Comparable<Bien>{
     private String addresse;
@@ -22,6 +24,8 @@ abstract public class Bien implements Comparable<Bien>{
         this.negociable = negociable;
         this.description = description;
         this.imgsUrl = imgsUrl;
+
+        proprietaire.ajouterBien(this);
     }
 
     public Wilaya getWilaya() {
@@ -89,7 +93,7 @@ abstract public class Bien implements Comparable<Bien>{
                 resultat = this.prixVente();
             case Echange:
                 resultat = this.prixVente();
-                if (this.wilaya.getNomWilaya() != wilaya.getNomWilaya())
+                if (wilaya != null && !this.wilaya.getNomWilaya().equals(wilaya.getNomWilaya()))
                     resultat += resultat * 0.0025;
                 break;
             case Location:
@@ -155,10 +159,24 @@ abstract public class Bien implements Comparable<Bien>{
     public void afficherDetails() {
         //TODO add afficher details
     }
+    public void afficherDetails(Wilaya wilaya) {
+        //TODO add afficher details
+    }
+
+    public void afficherPrixFinal() {
+        System.out.println("Prix final du bien : " + this.calculerPrix());
+    }
+
+    public void afficherPrixFinal(Wilaya wilaya) {
+        System.out.println("Prix final du bien : " + this.calculerPrix(wilaya));
+    }
 
     @Override
     public int compareTo(Bien bien) {
-        //TODO complete the function compare to
-        return 0;
+        int i = this.addresse.compareTo(bien.getAddresse());
+        if (i != 0)
+            i = this.date.compareTo(bien.getDate());
+        return i;
     }
+
 }

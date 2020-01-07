@@ -2,25 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42276f3e-09e4-4fa6-83e2-e625ba6bb22c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Wilaya.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WilayaInexistante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Agence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DuplexException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SuperficieException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TP_POO/Appartement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP_POO/Appartement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TP_POO/Bien.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP_POO/Bien.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP_POO/Coordonnees.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP_POO/Habitable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP_POO/Habitable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TP_POO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP_POO/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TP_POO/Maison.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP_POO/Maison.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TP_POO/Terrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP_POO/Terrain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appartement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appartement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coordonnees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proprietaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Habitable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Habitable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Maison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maison.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Terrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proprietaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proprietaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Wilaya.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wilaya.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,8 +84,18 @@
       <option name="presentableId" value="Default" />
       <updated>1573829181790</updated>
       <workItem from="1573829188080" duration="2534000" />
-      <workItem from="1575548024061" duration="9189000" />
+      <workItem from="1575548024061" duration="9278000" />
+      <workItem from="1577912351168" duration="359000" />
+      <workItem from="1578408442437" duration="10814000" />
     </task>
+    <task id="LOCAL-00001" summary="class Wilaya + implementation de calculerPrix">
+      <created>1575557619656</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575557619656</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,5 +113,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="class Wilaya + implementation de calculerPrix" />
+    <option name="LAST_COMMIT_MESSAGE" value="class Wilaya + implementation de calculerPrix" />
   </component>
 </project>

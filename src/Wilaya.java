@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class Wilaya {
     String nomWilaya;
     double prixMetreCarre;
-    private static HashMap<String, Double> prixWilayas;
+    private static HashMap<String, Double> prixWilayas = new HashMap<String, Double>();
 
     public Wilaya(String nomWilaya) throws WilayaInexistante {
         if (prixWilayas.containsKey(nomWilaya)) {

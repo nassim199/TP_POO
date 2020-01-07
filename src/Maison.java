@@ -5,12 +5,14 @@ public class Maison extends Habitable{
     private boolean contientJardin, contientGarage, contientPiscine;
     private double superficieHabitable;
 
-    public Maison(String addresse, Wilaya wilaya, Transaction typeTransaction, Proprietaire proprietaire, Date date, double superficie, double prix, boolean negociable, String description, String[] imgsUrl, int nbrPieces, boolean estMeuble, int nbrEtages, boolean contientJardin, boolean contientGarage, boolean contientPiscine, double superficieHabitable) {
+    public Maison(String addresse, Wilaya wilaya, Transaction typeTransaction, Proprietaire proprietaire, Date date, double superficie, double prix, boolean negociable, String description, String[] imgsUrl, int nbrPieces, boolean estMeuble, int nbrEtages, boolean contientJardin, boolean contientGarage, boolean contientPiscine, double superficieHabitable) throws SuperficieException{
         super(addresse, wilaya, typeTransaction, proprietaire, date, superficie, prix, negociable, description, imgsUrl, nbrPieces, estMeuble);
         this.nbrEtages = nbrEtages;
         this.contientJardin = contientJardin;
         this.contientGarage = contientGarage;
         this.contientPiscine = contientPiscine;
+        if (superficie < superficieHabitable)
+            throw new SuperficieException();
         this.superficieHabitable = superficieHabitable;
     }
 
